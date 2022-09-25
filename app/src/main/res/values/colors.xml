@@ -5,6 +5,19 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
+    <color name="green_sicredi">#3EB039</color>
+    <color name="green_sicredi_light">#75E368</color>
+
+    <color name="green_sicredi_dark">#0F6326</color>
+    <color name="green_sicredi_dark_dark">#003700</color>
+    
+    <color name="white_cultured">#F5F5F6</color>
+    <color name="white_chinese">#E2E1E2</color>
+    
+    <color name="red_alabama_crimson">#B00020</color>
+
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

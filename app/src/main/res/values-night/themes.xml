@@ -2,15 +2,25 @@
     <!-- Base application theme. -->
     <style name="Theme.TestSicredi" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/green_sicredi_dark</item>
+        <item name="colorPrimaryVariant">@color/green_sicredi_dark_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/green_sicredi</item>
+        <item name="colorSecondaryVariant">@color/green_sicredi_light</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="21">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="colorError">@color/red_alabama_crimson</item>
+        <item name="colorOnError">@color/white</item>
     </style>
+
+    <style name="Theme.TestSicredi.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TestSicredi.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.TestSicredi.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
