@@ -1,7 +1,10 @@
-package dev.aquiladvx.testsicredi.ui
+package dev.aquiladvx.testsicredi.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -9,6 +12,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import dev.aquiladvx.testsicredi.R
 import dev.aquiladvx.testsicredi.databinding.ActivityMainBinding
+import dev.aquiladvx.testsicredi.model.repository.EventRepository
+import dev.aquiladvx.testsicredi.viewmodel.EventViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,8 +24,13 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
+    private val viewModel: EventViewModel by viewModels {
+        EventViewModel.EventViewModelFactory(EventRepository())
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        viewModel
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
@@ -34,4 +44,6 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.fragment_container)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
 }

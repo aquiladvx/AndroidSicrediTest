@@ -1,25 +1,22 @@
-package dev.aquiladvx.testsicredi.ui
+package dev.aquiladvx.testsicredi.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import dev.aquiladvx.testsicredi.R
-import dev.aquiladvx.testsicredi.databinding.FragmentHomeBinding
+import dev.aquiladvx.testsicredi.databinding.FragmentEventDetailBinding
 
+class EventDetailFragment : Fragment() {
 
-class HomeFragment : Fragment() {
-
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentEventDetailBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentEventDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -30,14 +27,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupUI() {
-        binding.btn.setOnClickListener {
-            findNavController().navigate(R.id.action_HomeFragment_to_EventDetailFragment)
-        }
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }
